@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEA - Premium 3D Herbal Tea Experience</title>
+    <meta name="description" content="LUXTEA crafts premium herbal tea blends with black tea, cinnamon, cardamom, mint, botanicals, and slow-brew ritual guidance.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loadingOverlay" class="loading-overlay" aria-live="polite">
+        <div class="loading-content">
+            <div class="loading-steam" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <p class="loading-text">Building the tea room...</p>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="#hero" class="logo" aria-label="LUXTEA home">
+                <span class="logo-mark">LT</span>
+                <span class="logo-text">LUXTEA</span>
+            </a>
+
+            <nav class="nav-menu" aria-label="Main navigation">
+                <a href="#collection" class="nav-link">Collection</a>
+                <a href="#tea-page" class="nav-link">Tea Page</a>
+                <a href="#blend" class="nav-link">Blend</a>
+                <a href="#ritual" class="nav-link">Ritual</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <button class="cta-button header-cta" data-scroll="#collection">Order Now</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <canvas id="heroScene" class="hero-scene" aria-hidden="true"></canvas>
+            <div class="hero-atmosphere" aria-hidden="true">
+                <span class="leaf-float leaf-float-1"></span>
+                <span class="leaf-float leaf-float-2"></span>
+                <span class="leaf-float leaf-float-3"></span>
+                <span class="steam-thread steam-thread-1"></span>
+                <span class="steam-thread steam-thread-2"></span>
+            </div>
+
+            <div class="hero-copy">
+                <p class="eyebrow">Premium herbal infusions</p>
+                <h1>TEA</h1>
+                <p class="hero-lede">
+                    A cinematic tea house for slow mornings, late studio nights, and the quiet moment before everything begins again.
+                </p>
+                <p class="hero-text">
+                    Every blend is built around loose black tea, lifted with real spices and cooling botanicals, then finished for aroma, texture, and a steady golden cup.
+                </p>
+                <div class="hero-actions">
+                    <button class="cta-button primary" data-scroll="#collection">Shop Collection</button>
+                    <button class="cta-button ghost" data-scroll="#tea-page">Explore Tea</button>
+                </div>
+            </div>
+
+            <div class="home-frame-stage" aria-label="Animated 3D tea bag opening visual">
+                <div class="home-frame-shell">
+                    <canvas id="homeFrameCanvas" aria-label="Animated LUXTEA tea bag sequence"></canvas>
+                    <div class="home-frame-caption">
+                        <span>3D tea bag animation</span>
+                        <strong>Premium frame sequence</strong>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="hero-panel" aria-label="Tea blend highlights">
+                <div class="hero-stat">
+                    <span>12 min</span>
+                    <p>full ritual from kettle to first sip</p>
+                </div>
+                <div class="hero-stat">
+                    <span>7 notes</span>
+                    <p>malt, honey, mint, cedar, spice, cream, citrus</p>
+                </div>
+                <div class="hero-stat">
+                    <span>0 dust</span>
+                    <p>whole leaves, pods, peel, and visible botanicals</p>
+                </div>
+            </aside>
+
+            <div class="scroll-indicator" aria-hidden="true">
+                <span></span>
+            </div>
+        </section>
+
+        <section class="collection section-band" id="collection">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <p class="eyebrow">Whole collection</p>
+                    <h2>Tea blends with shelf presence, depth, and a real ritual behind each box.</h2>
+                    <p>
+                        Choose by mood, aroma, caffeine level, or brewing style. Each blend includes steeping notes, ingredient transparency, and a sensory profile designed to feel rich before the cup is even poured.
+                    </p>
+                </div>
+
+                <div class="products-grid">
+                    <article class="product-card reveal tilt-card" data-product="Amber Calm" data-href="amber-calm.html" tabindex="0" role="link" aria-label="Open Amber Calm tea page">
+                        <div class="product-stage amber-stage" aria-hidden="true">
+                            <div class="tea-pack-3d amber-pack">
+                                <span class="pack-face pack-front">
+                                    <strong>Amber Calm</strong>
+                                    <em>cinnamon black tea</em>
+                                </span>
+                                <span class="pack-face pack-side"></span>
+                                <span class="pack-face pack-top"></span>
+                            </div>
+                            <span class="ingredient-piece cinnamon-stick piece-a"></span>
+                            <span class="ingredient-piece cardamom-pod piece-b"></span>
+                            <span class="product-shadow"></span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-meta">
+                                <span>Medium caffeine</span>
+                                <span>$24</span>
+                            </div>
+                            <h3>Amber Calm</h3>
+                            <p>
+                                Deep black tea, cinnamon bark, green cardamom, orange peel, and a soft honey finish. Built for evenings when the room is dim and the cup should feel slow, warm, and grounding.
+                            </p>
+                            <ul class="taste-list">
+                                <li>Best with milk or oat cream</li>
+                                <li>Steep 4 minutes at 203 F</li>
+                                <li>Notes of malt, spice, cedar, and caramel</li>
+                            </ul>
+                            <a class="product-link" href="amber-calm.html">View Blend</a>
+                            <button class="product-button">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal tilt-card" data-product="Mint Ritual" data-href="mint-ritual.html" tabindex="0" role="link" aria-label="Open Mint Ritual tea page">
+                        <div class="product-stage mint-stage" aria-hidden="true">
+                            <div class="tea-pack-3d mint-pack">
+                                <span class="pack-face pack-front">
+                                    <strong>Mint Ritual</strong>
+                                    <em>green mint infusion</em>
+                                </span>
+                                <span class="pack-face pack-side"></span>
+                                <span class="pack-face pack-top"></span>
+                            </div>
+                            <span class="ingredient-piece mint-leaf piece-a"></span>
+                            <span class="ingredient-piece citrus-peel piece-b"></span>
+                            <span class="product-shadow"></span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-meta">
+                                <span>Low caffeine</span>
+                                <span>$22</span>
+                            </div>
+                            <h3>Mint Ritual</h3>
+                            <p>
+                                Spearmint, black tea tips, lemon verbena, nettle, and a whisper of fennel. Clean and bright without becoming sharp, this is the blend for focus, reset, and afternoon air.
+                            </p>
+                            <ul class="taste-list">
+                                <li>Excellent over ice with lemon</li>
+                                <li>Steep 3 minutes at 195 F</li>
+                                <li>Notes of mint, meadow, citrus, and cool herbs</li>
+                            </ul>
+                            <a class="product-link" href="mint-ritual.html">View Blend</a>
+                            <button class="product-button">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal tilt-card" data-product="Cinnamon Silk" data-href="cinnamon-silk.html" tabindex="0" role="link" aria-label="Open Cinnamon Silk tea page">
+                        <div class="product-stage silk-stage" aria-hidden="true">
+                            <div class="tea-pack-3d silk-pack">
+                                <span class="pack-face pack-front">
+                                    <strong>Cinnamon Silk</strong>
+                                    <em>spiced vanilla tea</em>
+                                </span>
+                                <span class="pack-face pack-side"></span>
+                                <span class="pack-face pack-top"></span>
+                            </div>
+                            <span class="ingredient-piece vanilla-bean piece-a"></span>
+                            <span class="ingredient-piece cinnamon-stick piece-b"></span>
+                            <span class="product-shadow"></span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-meta">
+                                <span>Medium caffeine</span>
+                                <span>$26</span>
+                            </div>
+                            <h3>Cinnamon Silk</h3>
+                            <p>
+                                A rounded black tea with sweet cinnamon, vanilla bean, cacao shell, and toasted chicory. Smooth enough for dessert, structured enough for a morning cup with real body.
+                            </p>
+                            <ul class="taste-list">
+                                <li>Pairs with pastry and dark chocolate</li>
+                                <li>Steep 5 minutes at 203 F</li>
+                                <li>Notes of vanilla, spice, cocoa, and cream</li>
+                            </ul>
+                            <a class="product-link" href="cinnamon-silk.html">View Blend</a>
+                            <button class="product-button">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal tilt-card" data-product="Rose Night" data-href="rose-night.html" tabindex="0" role="link" aria-label="Open Rose Night tea page">
+                        <div class="product-stage rose-stage" aria-hidden="true">
+                            <div class="tea-pack-3d rose-pack">
+                                <span class="pack-face pack-front">
+                                    <strong>Rose Night</strong>
+                                    <em>floral herbal cup</em>
+                                </span>
+                                <span class="pack-face pack-side"></span>
+                                <span class="pack-face pack-top"></span>
+                            </div>
+                            <span class="ingredient-piece rose-petal piece-a"></span>
+                            <span class="ingredient-piece chamomile-flower piece-b"></span>
+                            <span class="product-shadow"></span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-meta">
+                                <span>Caffeine free</span>
+                                <span>$25</span>
+                            </div>
+                            <h3>Rose Night</h3>
+                            <p>
+                                Rose petals, chamomile, lavender, apple pieces, and tulsi come together as a soft botanical nightcap. It is fragrant without perfume and gentle without losing shape.
+                            </p>
+                            <ul class="taste-list">
+                                <li>Serve plain in a porcelain cup</li>
+                                <li>Steep 6 minutes at 200 F</li>
+                                <li>Notes of rose, hay, apple, honey, and lavender</li>
+                            </ul>
+                            <a class="product-link" href="rose-night.html">View Blend</a>
+                            <button class="product-button">Add to Cart</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="tea-page section-band" id="tea-page">
+            <div class="section-container tea-layout">
+                <div class="tea-copy reveal">
+                    <p class="eyebrow">Tea page</p>
+                    <h2>The cup, the box, the steam, the exact brew.</h2>
+                    <p>
+                        This signature tea page is made for customers who want to understand the blend before they buy it. It shows the leaves, the spice structure, the steeping rhythm, and how the final cup should taste.
+                    </p>
+                    <p>
+                        Amber Calm begins with whole black tea leaves for depth. Cinnamon bark adds warm sweetness, cardamom creates lift, mint keeps the finish clean, and orange peel brings a small bright edge. The result is layered, aromatic, and steady.
+                    </p>
+
+                    <div class="brew-steps">
+                        <div class="brew-step reveal">
+                            <span>01</span>
+                            <h3>Warm the cup</h3>
+                            <p>Pour hot water into the cup for 20 seconds, then discard. The warmed porcelain keeps the first infusion round and fragrant.</p>
+                        </div>
+                        <div class="brew-step reveal">
+                            <span>02</span>
+                            <h3>Measure the leaves</h3>
+                            <p>Use 2.5 grams per 8 ounces. The blend is loose and visible, so you can see black tea, cinnamon, cardamom, and botanicals before brewing.</p>
+                        </div>
+                        <div class="brew-step reveal">
+                            <span>03</span>
+                            <h3>Steep with patience</h3>
+                            <p>Use water just off the boil and steep for 4 minutes. Add milk only after tasting the first clear sip.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tea-visual reveal">
+                    <div class="frame-reel-shell">
+                        <canvas id="blendCanvas" aria-label="Animated tea blend frame reel"></canvas>
+                        <div class="reel-caption">
+                            <span>Cinematic brew motion</span>
+                            <strong>Amber Calm product study</strong>
+                        </div>
+                    </div>
+                    <div class="cup-3d" aria-hidden="true">
+                        <span class="cup-steam steam-a"></span>
+                        <span class="cup-steam steam-b"></span>
+                        <span class="cup-steam steam-c"></span>
+                        <span class="cup-body"></span>
+                        <span class="cup-tea"></span>
+                        <span class="cup-handle"></span>
+                        <span class="cup-saucer"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blend section-band" id="blend">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <p class="eyebrow">Inside the blend</p>
+                    <h2>Visible ingredients, clear purpose, balanced aroma.</h2>
+                    <p>
+                        The blend is not powdered or hidden. Each ingredient earns its place through taste, structure, and the feeling it brings to the cup.
+                    </p>
+                </div>
+
+                <div class="ingredient-orbit" aria-label="Ingredient details">
+                    <article class="ingredient-node reveal">
+                        <span class="node-object tea-leaf-object"></span>
+                        <h3>Black tea leaves</h3>
+                        <p>Strong body, natural tannin, and a malty base that holds milk and spice without becoming heavy.</p>
+                    </article>
+                    <article class="ingredient-node reveal">
+                        <span class="node-object cinnamon-object"></span>
+                        <h3>Cinnamon bark</h3>
+                        <p>Warm sweetness and a polished finish, cut into visible curls for slow release during the steep.</p>
+                    </article>
+                    <article class="ingredient-node reveal">
+                        <span class="node-object cardamom-object"></span>
+                        <h3>Cardamom pods</h3>
+                        <p>Green spice and lift. The pods open into the steam and keep the blend from feeling flat.</p>
+                    </article>
+                    <article class="ingredient-node reveal">
+                        <span class="node-object mint-object"></span>
+                        <h3>Mint leaf</h3>
+                        <p>A clean cooling line at the finish, especially helpful when brewed strong or served after food.</p>
+                    </article>
+                    <article class="ingredient-node reveal">
+                        <span class="node-object citrus-object"></span>
+                        <h3>Orange peel</h3>
+                        <p>Light citrus oil that brightens the aroma and makes the first sip feel more dimensional.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="ritual section-band" id="ritual">
+            <div class="section-container ritual-layout">
+                <div class="ritual-visual reveal" aria-hidden="true">
+                    <div class="ritual-table">
+                        <span class="ritual-kettle"></span>
+                        <span class="ritual-cup"></span>
+                        <span class="ritual-box"></span>
+                        <span class="ritual-spoon"></span>
+                    </div>
+                </div>
+                <div class="ritual-copy reveal">
+                    <p class="eyebrow">The ritual</p>
+                    <h2>Luxury is not extra. It is attention.</h2>
+                    <p>
+                        LUXTEA is made for the moment when the room becomes quiet enough to notice small things: the click of the tin, the scent of crushed cardamom, the color blooming in water, the warmth settling into your hands.
+                    </p>
+                    <p>
+                        Our teas are packed in small batches, sealed for aroma, and built to be brewed more than one way. Drink them plain, lengthened with milk, poured over ice, or made into a concentrated latte base.
+                    </p>
+                    <div class="ritual-notes">
+                        <div>
+                            <strong>Morning</strong>
+                            <span>Amber Calm with milk, toast, and a slow start.</span>
+                        </div>
+                        <div>
+                            <strong>Afternoon</strong>
+                            <span>Mint Ritual clear, bright, and served in a glass cup.</span>
+                        </div>
+                        <div>
+                            <strong>Night</strong>
+                            <span>Rose Night steeped longer for floral softness.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-brand reveal">
+                <p class="eyebrow">Contact</p>
+                <h2>Bring the tea room home.</h2>
+                <p>
+                    Join the LUXTEA list for seasonal blends, brewing guides, restock notes, and early access to limited tins.
+                </p>
+            </div>
+
+            <form class="newsletter reveal" aria-label="Newsletter signup">
+                <label for="newsletterEmail">Email address</label>
+                <div class="newsletter-row">
+                    <input id="newsletterEmail" type="email" placeholder="you@example.com" autocomplete="email">
+                    <button class="cta-button primary" type="submit">Subscribe</button>
+                </div>
+                <p class="form-status" role="status"></p>
+            </form>
+
+            <div class="footer-links">
+                <a href="#collection">Collection</a>
+                <a href="#tea-page">Tea Page</a>
+                <a href="#blend">Blend</a>
+                <a href="#ritual">Ritual</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 LUXTEA. Premium herbal infusions crafted with intention.</p>
+                <button class="cta-button ghost" data-scroll="#hero">Back to Top</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
